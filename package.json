@@ -1,0 +1,32 @@
+{
+  "name": "prjctr-gulp-class",
+  "version": "1.0.0",
+  "description": "`npm start` – start project `npm run build` – build project",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "browser-sync": "^2.18.12",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-watch": "^4.3.11",
+    "postcss-cssnext": "^2.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/projector-team/prjktr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/projector-team/prjktr/issues"
+  },
+  "homepage": "https://github.com/projector-team/prjktr#readme"
+}
