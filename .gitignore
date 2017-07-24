@@ -30,3 +30,9 @@ nbproject
 _tmp
 node_modules
 bower_components
+
+.idea/
+node_modules/
+.tmp
+Thumbs.db
+buld/
