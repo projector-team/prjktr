@@ -1,0 +1,17 @@
+include ../../node_modules/bemto.pug/bemto
+include ../blocks/index
+
+block variables
+	- var title="Hello!"
+
+doctype html
+html
+	head
+		title= title
+		link(rel="stylesheet" href="/assets/vendor.css")
+		link(rel="stylesheet" href="/assets/app.css")
+		block extracss
+	body
+		block main
+		script(src="/assets/vendor.js")
+		script(src="/assets/app.js")
