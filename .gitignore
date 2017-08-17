@@ -35,4 +35,4 @@ bower_components
 node_modules/
 .tmp
 Thumbs.db
-buld/
+build/
