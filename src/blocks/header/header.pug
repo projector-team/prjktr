@@ -1,3 +1,6 @@
-mixin header(siteName)
-	+b.header
-		+e('h1').title I am #{siteName}
+mixin header(siteName, href)
+	+b.header.col-md-12
+		+e('a').logo  #{siteName}
+
+		+b('ul').menu
+			+e('li').item #{'test'}
