@@ -25,8 +25,9 @@ const reload = (done) => {
 };
 
 const ignorePug = [
-	'!src/layouts/**',
-	'!src/blocks/**'
+  '!src/layouts/**',
+  '!src/blocks/**',
+  '!src/globals/**',
 ];
 
 const jsAppFiles = [
