@@ -1,6 +1,7 @@
-mixin header(siteName, href)
-	+b.header.col-md-12
-		+e('a').logo  #{siteName}
+include ../menu/menu
 
-		+b('ul').menu
-			+e('li').item #{'test'}
+mixin header(siteName, href)
+	+b.header
+		+e('a').logo(href=href)= siteName
+		+e.nav
+			+b-menu(menuItems)
