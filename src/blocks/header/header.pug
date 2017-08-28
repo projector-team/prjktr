@@ -1,3 +1,9 @@
 mixin header(siteName)
 	+b.header
-		+e('h1').title I am #{siteName}
+		+e('a').title(href="/") #{siteName}
+		+e.nav
+			//- +b(ul).menu
+			//- 	mixin menu(item)
+			//- 		for item in menuItems
+			//- 			+e('li')
+			//- 				+e('a')(href="/") =item
