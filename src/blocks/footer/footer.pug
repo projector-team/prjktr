@@ -1,3 +1,27 @@
 mixin footer
-	.footer
-		h3 I am footer (Alex)
+	+b.footer
+		.container
+			.cf
+				+e.logo.col-4
+					img(src="/assets/i/ecosoft.png" class="" alt="")
+				.col-4
+					ul.footer-menu
+						each val in ["Фільтр-глечик Ecosoft","Фільтр-глечик Наша Вода","Проточний фільтр","Фільтр зворотнього осмосу"]
+							li
+								a(href="#" class="footer-menu__link")= val
+				.col-4
+					ul.footer-menu
+						li
+							a(href="#" class="footer-menu__link") Картриджі
+				.col-4
+					ul.footer-menu
+						li
+							a(href="#" class="footer-menu__link") Доставка і оплата
+						li
+						li
+						li
+							a(href="#" class="footer-menu__link") Замовити/запитати: +38 063 123 45 67
+			+e.copyrights
+				| © Ecosoft 2017
+				span.footer__copyrights__fright
+					a(class="arrow-right" href="#") На головний сайт Ecosoft
