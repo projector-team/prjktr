@@ -1,4 +1,50 @@
+@import "../../mixins-styl/colors"
+
+.header__title
+	display table-cell
+	width 50%
+    vertical-align bottom
+
 .header
-	border 3px solid yellow
-	&__title
-		color white
+	width 100%
+	position absolute
+	height 100px
+	display table
+	table-layout fixed
+	top 0
+
+	&__logo 
+		width 175px 
+		
+	&__nav
+		display table-cell
+		width 50%    
+		vertical-align bottom
+	
+.menu 
+	margin 0
+	list-style none
+	padding 0
+
+	&__item 
+		float left
+		padding 20px 44px
+
+		a 
+			color black
+			text-decoration none
+			font-family "Roboto", sans-serif
+			font-weight bold
+			font-size 18px
+		
+		&:last-child 
+			width 40px
+			height 40px 
+			border-radius 50%
+			background light-blue
+			padding 0
+			margin 10px 44px
+							
+						
+
+	

@@ -1,9 +1,15 @@
-mixin header(siteName)
+include ../../globals/data.pug
+
+mixin header
 	+b.header
-		+e('a').title(href="/") #{siteName}
+		+e('a').title(href="/")
+			+e('img').logo(src='/assets/i/ecosoft.png')
+
 		+e.nav
-			//- +b(ul).menu
-			//- 	mixin menu(item)
-			//- 		for item in menuItems
-			//- 			+e('li')
-			//- 				+e('a')(href="/") =item
+			+b('ul').menu
+				each item in menuItems
+					+e('li').item
+						if item.ico
+							+e('img')(src=item.ico)
+						else	
+							+e('a')(href="/")= item.title
