@@ -1,10 +1,13 @@
 @import "../../mixins-styl/colors"
 
-.header__title
+.table-cell
 	display table-cell
-	width 50%
-    vertical-align bottom
+	width 50%    
+	vertical-align bottom
 
+*
+	box-sizing border-box
+	
 .header
 	width 100%
 	position absolute
@@ -12,37 +15,45 @@
 	display table
 	table-layout fixed
 	top 0
+	
+	&__title
+		@extend .table-cell
+		padding-left 44px
+
 
 	&__logo 
 		width 175px 
 		
 	&__nav
-		display table-cell
-		width 50%    
-		vertical-align bottom
+		@extend .table-cell
 	
 .menu 
 	margin 0
 	list-style none
 	padding 0
+			
+	&__img
+		width 100%	
+		
+	&__link 
+		color black
+		text-decoration none
+		font-family "Roboto", sans-serif
+		font-weight bold
+		font-size 18px
 
 	&__item 
-		float left
+		float right
 		padding 20px 44px
 
-		a 
-			color black
-			text-decoration none
-			font-family "Roboto", sans-serif
-			font-weight bold
-			font-size 18px
 		
-		&:last-child 
+		
+		&:first-child 
 			width 40px
 			height 40px 
 			border-radius 50%
 			background light-blue
-			padding 0
+			padding 10px
 			margin 10px 44px
 							
 						
