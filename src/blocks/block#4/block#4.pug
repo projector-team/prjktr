@@ -1,0 +1,14 @@
+mixin block4
+	include data4
+
+	+b('section').section4
+		+b('div').container
+			+b('div').technology
+				+e('div').filter
+					+e('img').image(src="assets/i/filter.png")
+				+e('div').filter
+					+e('h3').title= "Технологія"
+					for item in block4_content
+						+e('p').text= item.text
+					+e('button').btn= 'Нагадати про заміну картриджа'
+						+e('img').ico(src= "assets/i/bell.svg")
