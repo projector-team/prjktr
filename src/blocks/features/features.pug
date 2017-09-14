@@ -1,0 +1,9 @@
+mixin b-features
+	include data
+
+	+b.features
+		.container
+			+e('ul').list
+				each item in features
+					+e('li').item
+						+b-feature(item)
