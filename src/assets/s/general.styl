@@ -1,3 +1,5 @@
+
+
 @font-face
 	font-family: 'Museo Sans';
 	src: url('f/museosans-100.woff') format('woff'), url('f/museosans-100.ttf') format('truetype');
@@ -9,57 +11,40 @@ body
 	font-family 'Museo Sans'
 	font-weight: 100
 
-.footer
-	background-color: #f9f9f9
-	padding 55px 0
-	&__logo img
-		width 158px
-	&__copyrights
-		font-size 21px
-	&__copyrights__fright
-		float right
-	&__copyrights__fright a
-		color #00aeef
-		text-decoration none
-		position relative
-	&__copyrights__fright a:hover
-		color #000
-
-	&__copyrights__fright a:hover:after
-		border-left-color #000
-
-	&__copyrights__fright a:after
-		position absolute
-		width 0
-		height 0
-		top 1px
-		right -20px
-		border 8px solid transparent
-		border-left-color #00aeef
-		content ''
-
-
-.footer-menu
-	list-style none
-	line-height 2.5
-	&__link
-		text-decoration none
-		font-size 18px
-		color #000
-		font-family Roboto Regular
+res1366 = "only screen and (max-width 1366px)"
+res1024 = "screen and (max-width 1024px)"
+res767 = "screen and (max-width: 767px)"
 
 .container
 	width 1280px
 	margin 0 auto
+	@media res1366
+		&
+			width 960px
+	@media res1024
+		&
+			width 720px
 
-.cf:before, .cf:after
-	content " "
-	display table
-.cf:after
-	clear: both
+	@media res767
+		&
+			width 100%
+
+mixin clearfix()
+	*zoom: 1
+	&:before
+	&:after
+		content " "
+		display table
+	&:after
+		clear both
 .cf
 	*zoom: 1
-
+	&:before
+	&:after
+		content " "
+		display table
+	&:after
+		clear both
 
 
 
@@ -68,13 +53,3 @@ body
 	width 25%
 	float: left
 
-@media only screen and (max-width: 1366px)
-	.container
-		width 960px
-@media screen and (max-width: 1024px)
-	.container
-		width 720px
-
-@media screen and (max-width: 767px)
-	.container
-		width 100%
