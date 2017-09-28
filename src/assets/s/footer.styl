@@ -1,0 +1,36 @@
+.footer
+  background-color: #f9f9f9
+  padding 55px 0
+  &__logo-i
+    width 158px
+  &__copyrights
+    font-size 21px
+  &__copyrights__fright
+    float right
+  &__copyrights__fright-link
+    color #00aeef
+    text-decoration none
+    position relative
+    &:hover
+      color #000
+      &:after
+        border-left-color #000
+    &:after
+      position absolute
+      width 0
+      height 0
+      top 1px
+      right -20px
+      border 8px solid transparent
+      border-left-color #00aeef
+      content ''
+
+
+.footer-menu
+  list-style none
+  line-height 2.5
+  &__link
+    text-decoration none
+    font-size 18px
+    color #000
+    font-family Roboto Regular

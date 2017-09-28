@@ -1,3 +1,7 @@
-mixin header(siteName)
+include ../menu/menu
+
+mixin header(siteName, href)
 	+b.header
-		+e('h1').title I am #{siteName}
+		+e('a').logo(href=href)= siteName
+		+e.nav
+			+b-menu(menuItems)
