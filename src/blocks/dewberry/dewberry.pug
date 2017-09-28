@@ -1,0 +1,31 @@
+mixin dewberry
+	+b('section')#dewberry
+		+b('div').container
+			+b('div').dewberry.clearfix
+				+e('div').shape.f-left
+					+e('h3')= "Dewberry shape"
+					+e('div').img.f-left
+						+e('img')(src= "assets/i/filter-small.png")
+						+e('a')(href="#details").link= "Детальніше про фільтр"
+					+e('div').info.f-right
+						+e('div').text
+							+e('p')
+								+e('span')= "2л"
+								| очищеної води
+						+e('p').price="360 грн"
+						+e('button').button= "Замовити"
+				+e('div').slim.f-right
+					+e('h3')= "Dewberry slim"
+					+e('div').img.f-left
+						+e('img')(src= "assets/i/filter-small.png")
+						+e('a')(href="#details").link= "Детальніше про фільтр"
+					+e('div').info.f-right
+						+e('div').text
+							+e('p')= "очищеної води"
+								+e('span')= "1.7л"
+						+e('div').text.two
+							+e('p')= "вміщується у двері холодильника"
+								+e('span')= "*"
+						+e('p').price="360 грн"
+						+e('button').button= "Замовити"
+	

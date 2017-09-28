@@ -1,0 +1,17 @@
+mixin costs
+	+b('section').costs
+		+b('div').container
+			+b('div').benefits
+				+e('p').title= "Вартість 1 літра очищенної води"
+				+e('p').text= "Вираховуємо на основі вартості фільтра, строкуйого служби, частоти заміни та вартості картриджів, а також денної норми споживання води."
+				+b('div').benefit__list.clearfix
+					+e('div').item__filter
+						+e('img')(src= "assets/i/filter-small.png")
+						+e('p').item__name= "Фільтр Ecosoft Dewberry 0,17 грн"
+					+e('div').item__boutle__small
+						+e('img')(src= "assets/i/boutle-small.png")
+						+e('p').item__name= "Фільтр Ecosoft Dewberry 0,17 грн"
+					+e('div').item__boutle__big
+						+e('img')(src= "assets/i/boutle-big.png")
+						+e('p').item__name= "Фільтр Ecosoft Dewberry 0,17 грн"
+	

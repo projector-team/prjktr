@@ -1,0 +1,130 @@
+#dewberry
+	background #fff
+	padding 100px 0
+	box-sizing border-box
+
+.container
+	width 90%
+	margin 0 auto
+
+.clearfix {
+	
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		}
+}	
+.f-left {
+	float:left;
+	width:50%;
+}
+.f-right {
+	float:right;
+	width:50%;
+}
+.dewberry {
+	h3 {
+		margin-bottom 80px
+		text-align center
+	    font-weight: bold;
+	    font-family: "Roboto", sans-serif;
+	}
+	&__shape {
+		padding-right 40px
+		box-sizing border-box
+	}
+	
+	&__img {
+		text-align: center;
+		
+		img {
+			width: 225px;
+		}
+	}
+	&__link {
+		color: black;
+		font-family: "Roboto", sans-serif;
+	}
+	&__slim {
+		padding-left 40px
+		box-sizing border-box
+	}
+	&__info {
+		position relative
+		min-height 310px
+	}
+	
+	&__text {
+
+		p {
+		    font-size: 20px;
+		    font-weight: bolder;
+		    font-family: "Roboto", sans-serif;
+		    line-height: 22px;
+		    position: relative;
+		    padding-left: 70px;
+		    padding-top: 15px;
+		    padding-bottom: 15px;
+			
+		}
+		
+		&.two {
+
+			p {
+				padding-top 0;
+				
+			}
+			span {
+				font-size: 70px;
+    			line-height: 84px;
+			}
+		}
+		
+		span {
+			left: 0;
+			top: 0;
+			position: absolute;
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+			background: #00aeef;
+			font-size: 20px;
+			font-weight: bolder;
+			color: white;
+			font-family: "Roboto", sans-serif;
+			line-height: 55px;
+			text-align: center;			
+			
+		}
+	}
+	
+	&__button {
+		text-transform: uppercase;
+		text-align: center;
+		width 100%
+		line-height 44px
+		background #00aeef	
+		color white
+		letter-spacing 2px
+	    font-size: 20px;
+	    font-weight: bolder;
+	    font-family: "Roboto", sans-serif;
+		border 1px solid #00aeef
+		position absolute
+		bottom 0
+		left 0
+		cursor pointer
+	}
+	
+	&__price {
+	    position: absolute;
+	    font-weight: bold;
+	    bottom: 50px;
+	    font-size: 20px;
+	    font-family: 'Roboto', sans-serif;
+	}
+
+}
