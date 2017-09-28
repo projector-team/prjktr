@@ -1,0 +1,7 @@
+include ../menu/menu
+
+mixin header(siteName, href)
+	+b.header
+		+e('a').logo(href=href)= siteName
+		+e.nav
+			+b-menu(menuItems)
