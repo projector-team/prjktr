@@ -1,3 +1,7 @@
+include ../menu/menu
+
 mixin footer
-	.footer
+	+b.footer
 		h3 I am footer
+		+e.nav
+			+b-menu(menuItems)

@@ -1,8 +1,9 @@
 include ../../node_modules/bemto.pug/bemto
 include ../blocks/index
+include ../globals/data
 
 block variables
-	- var title="Hello!"
+	- var title=siteData.name
 
 doctype html
 html
@@ -10,6 +11,31 @@ html
 		title= title
 		link(rel="stylesheet" href="/assets/vendor.css")
 		link(rel="stylesheet" href="/assets/app.css")
+
+		meta(name="keywords" content=siteData.keywords)
+		meta(name="description", content=siteData.description)
+
+		//- Schema.org markup for Google+
+		meta(itemprop="name", content=siteData.opengraph.title)
+		meta(itemprop="description", content=siteData.opengraph.description)
+		meta(itemprop="image", content=siteData.opengraph.image)
+
+		//- Twitter Card data
+		meta(name="twitter:card", content="product")
+		meta(name="twitter:site", content=siteData.opengraph.twitter)
+		meta(name="twitter:title", content=siteData.opengraph.title)
+		meta(name="twitter:description", content=siteData.opengraph.description)
+		meta(name="twitter:creator", content=siteData.opengraph.twitter)
+		meta(name="twitter:image", content=siteData.opengraph.image)
+
+		//- Open Graph data
+		meta(property="og:title", content=siteData.opengraph.title)
+		meta(property="og:type", content="article")
+		meta(property="og:url", content=siteData.url)
+		meta(property="og:image", content=siteData.opengraph.image)
+		meta(property="og:description", content=siteData.opengraph.description)
+		meta(property="og:site_name", content=siteData.name)
+
 		block extracss
 	body
 		block main
