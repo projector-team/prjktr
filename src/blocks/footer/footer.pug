@@ -2,6 +2,26 @@ include ../menu/menu
 
 mixin footer
 	+b.footer
-		h3 I am footer
-		+e.nav
-			+b-menu(menuItems)
+		.container
+			.cf
+				+e.logo.col-4
+					img(src="/assets/i/ecosoft.png" class="footer__logo-i" alt="")
+				.col-4
+					+b('ul').footer-menu
+						each item in footerMenu1
+							+e('li')
+								+e('a').link(href=item.url)= item.title
+				.col-4
+					+b('ul').footer-menu
+						each item in footerMenu2
+							+e('li')
+								+e('a').link(href=item.url)= item.title
+				.col-4
+					+b('ul').footer-menu
+						each item in footerMenu4
+							+e('li')
+								+e('a').link(href=item.url)= item.title
+			+b.copyrights
+				| © Ecosoft 2017
+				span.footer__copyrights__fright
+					a(class="arrow-right footer__copyrights__fright-link" href="#") На головний сайт Ecosoft
