@@ -53,6 +53,7 @@
     vertical-align: middle;
 }
 .benefit__item {
+	
 
 	&__name {
 	    line-height: 20px;
@@ -107,3 +108,12 @@
 		}
 	}
 }
+@import "styl/mixins"
+
+.benefit__item 
+	+for_breakpoint(mobile tablet)
+		float none
+		position relative
+		margin-top 90px
+		margin-bottom 90px
+		

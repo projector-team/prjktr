@@ -128,3 +128,11 @@
 	}
 
 }
+
+@import "../costs/styl/mixins"
+.container
+	.f-right,
+	.f-left
+		+for_breakpoint(mobile tablet)
+			float none
+			width 100%
