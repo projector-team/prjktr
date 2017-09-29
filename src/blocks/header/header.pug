@@ -1,7 +1,15 @@
-include ../menu/menu
+include ../../globals/data.pug
 
-mixin header(siteName, href)
+mixin header
 	+b.header
-		+e('a').logo(href=href)= siteName
+		+e('a').title(href="/")
+			+e('img').logo(src='/assets/i/ecosoft.png')
+
 		+e.nav
-			+b-menu(menuItems)
+			+b('ul').menu
+				each item in menuItems
+					+e('li').item
+						if item.ico
+							+e('img')(src=item.ico).img
+						else
+							+e('a')(href="/").link= item.title
